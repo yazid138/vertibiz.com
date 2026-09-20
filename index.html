@@ -1,1 +1,409 @@
-HALO
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertibiz - Software House & Vendor</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        vertibiz: {
+          dark: '#0f172a',
+          blue: '#3b82f6',
+          purple: '#8b5cf6',
+          gradient: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+<!-- Navbar -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">V</span>
+        </div>
+        <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Vertibiz</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Tentang</a>
+        <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Layanan</a>
+        <a href="#project" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Project</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Kontak</a>
+        <a href="#contact" class="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300">Mulai Sekarang</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-2xl" onclick="toggleMenu()">
+        ☰
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <div class="px-4 py-4 space-y-3">
+      <a href="#about" class="block text-gray-600 hover:text-blue-600 py-2" onclick="toggleMenu()">Tentang</a>
+      <a href="#services" class="block text-gray-600 hover:text-blue-600 py-2" onclick="toggleMenu()">Layanan</a>
+      <a href="#project" class="block text-gray-600 hover:text-blue-600 py-2" onclick="toggleMenu()">Project</a>
+      <a href="#contact" class="block text-gray-600 hover:text-blue-600 py-2" onclick="toggleMenu()">Kontak</a>
+      <a href="#contact" class="block px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-medium text-center">Mulai Sekarang</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-80"></div>
+  <div class="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+  <div class="absolute top-40 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+  <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-up">
+        <div class="inline-flex items-center px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
+          <span class="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
+          Sedang Trending 🔥
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          Vertibiz — <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Software House</span> Terpercaya
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg">
+          Kami mengubah ide bisnis Anda menjadi solusi digital yang kuat. Dari aplikasi web hingga otomatisasi sistem — semua di satu tempat.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-8 py-3.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5">
+            Mulai Project Anda
+          </a>
+          <a href="#about" class="px-8 py-3.5 border-2 border-gray-300 text-gray-700 rounded-xl font-bold hover:border-blue-500 hover:text-blue-600 transition-all duration-300">
+            Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+      <div class="animate-fade-up animation-delay-300 hidden md:flex justify-center">
+        <div class="relative">
+          <div class="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-3xl rotate-6 opacity-20 blur-2xl"></div>
+          <div class="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-3xl rotate-3 shadow-2xl shadow-blue-500/20 flex items-center justify-center">
+            <div class="text-center text-white p-8">
+              <div class="text-6xl mb-2">🚀</div>
+              <div class="text-2xl font-bold">Vertibiz</div>
+              <div class="text-sm opacity-80 mt-1">Software House</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Tentang Kami</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Kenapa Memilih Vertibiz?</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="group p-6 rounded-2xl border border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-500 animate-fade-up stagger-1">
+        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-5 group-hover:scale-110 transition-transform duration-300">💡</div>
+        <h3 class="text-xl font-bold mb-3">Inovatif</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Menggunakan teknologi terdepan untuk memberikan solusi yang relevan dan future-proof.</p>
+      </div>
+      <div class="group p-6 rounded-2xl border border-gray-100 hover:border-purple-300 hover:shadow-xl transition-all duration-500 animate-fade-up stagger-2">
+        <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 text-2xl mb-5 group-hover:scale-110 transition-transform duration-300">🎯</div>
+        <h3 class="text-xl font-bold mb-3">Terukur</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Setiap project diukur berdasarkan metrik kinerja, bukan hanya sekadar selesai.</p>
+      </div>
+      <div class="group p-6 rounded-2xl border border-gray-100 hover:border-blue-300 hover:shadow-xl transition-all duration-500 animate-fade-up stagger-3">
+        <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl mb-5 group-hover:scale-110 transition-transform duration-300">🤝</div>
+        <h3 class="text-xl font-bold mb-3">Support 24/7</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Tim support kami siap membantu kapan saja, termasuk maintenance dan update.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">Layanan</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Apa Saja yang Kami Tawarkan?</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="service-card group p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-up">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-blue-600 text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">🖥️</div>
+        <h3 class="font-bold text-lg mb-2">Web Development</h3>
+        <p class="text-gray-500 text-sm">Aplikasi web modern dengan React, Next.js, dan teknologi terkini.</p>
+      </div>
+      <div class="service-card group p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-up stagger-1">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center text-purple-600 text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">📱</div>
+        <h3 class="font-bold text-lg mb-2">Mobile App</h3>
+        <p class="text-gray-500 text-sm">Aplikasi Android & iOS dengan performa optimal dan UI/UX premium.</p>
+      </div>
+      <div class="service-card group p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-up stagger-2">
+        <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-200 rounded-xl flex items-center justify-center text-purple-600 text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">🤖</div>
+        <h3 class="font-bold text-lg mb-2">Telegram Bot</h3>
+        <p class="text-gray-500 text-sm">Otomatisasi bisnis via Telegram — auto posting, broadcast, dan sistem pesan.</p>
+      </div>
+      <div class="service-card group p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 animate-fade-up stagger-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl flex items-center justify-center text-pink-600 text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">☁️</div>
+        <h3 class="font-bold text-lg mb-2">Cloud Solution</h3>
+        <p class="text-gray-500 text-sm">Deploy & maintain infrastruktur cloud untuk skalabilitas bisnis Anda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Section - Auto Posting Telegram -->
+<section id="project" class="py-20 bg-white relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Project Unggulan</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Auto Posting Telegram untuk Kafe</h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded-full"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-up">
+        <h3 class="text-2xl font-bold mb-4">Otomatisasi Konten Kafe via Telegram</h3>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Proyek ini membangun sistem auto-posting Telegram Bot yang dirancang khusus untuk bisnis kafe. Mulai dari promosi menu, reminder opening hours, hingga update daily special — semua otomatis dan terjadwal.
+        </p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <span class="text-gray-600">Jadwal posting otomatis (CRON-based)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <span class="text-gray-600">Template pesan kafe yang customizable</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <span class="text-gray-600">Broadcast ke grup & channel Telegram</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <span class="text-gray-600">Dashboard admin untuk kelola konten</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-green-500 mt-1">✓</span>
+            <span class="text-gray-600">Analytics engagement & reach</span>
+          </li>
+        </ul>
+        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+          Ingin Serupa? Hubungi Kami →
+        </a>
+      </div>
+      <div class="animate-fade-up animation-delay-300 hidden md:flex justify-center">
+        <div class="relative w-80">
+          <div class="bg-gray-200 border-2 border-dashed rounded-xl w-80 h-48 flex items-center justify-center text-gray-400 text-sm mb-4">
+            [ 📱 Telegram UI Preview ]
+          </div>
+          <div class="flex gap-2 justify-center">
+            <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">✅ Active</div>
+            <div class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">🤖 Bot</div>
+            <div class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">📋 Schedule</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="animate-fade-up">
+        <div class="text-4xl md:text-5xl font-extrabold text-white counter" data-target="50">0</div>
+        <div class="text-blue-200 mt-2 text-sm">Project Selesai</div>
+      </div>
+      <div class="animate-fade-up stagger-1">
+        <div class="text-4xl md:text-5xl font-extrabold text-white counter" data-target="30">0</div>
+        <div class="text-blue-200 mt-2 text-sm">Klien Aktif</div>
+      </div>
+      <div class="animate-fade-up stagger-2">
+        <div class="text-4xl md:text-5xl font-extrabold text-white counter" data-target="5">0</div>
+        <div class="text-blue-200 mt-2 text-sm">Tahun Pengalaman</div>
+      </div>
+      <div class="animate-fade-up stagger-3">
+        <div class="text-4xl md:text-5xl font-extrabold text-white counter" data-target="99">0</div>
+        <div class="text-blue-200 mt-2 text-sm">% Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-up">
+      <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">Testimoni</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-3">Kata Klien Kami</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-fade-up">
+        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">★★★★★</div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">"Tim Vertibiz sangat profesional. Auto-posting Telegram untuk kafe kami berjalan sempurna, pelanggan jadi lebih engaged!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-700">AS</div>
+          <div>
+            <div class="font-bold text-sm">Andi Setiawan</div>
+            <div class="text-gray-400 text-xs">Owner Kopi Andi</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-fade-up stagger-1">
+        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">★★★★★</div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">"Respons cepat, tepat waktu, dan hasilnya luar biasa. System mereka membantu bisnis kafe kami berkembang pesat."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-700">BR</div>
+          <div>
+            <div class="font-bold text-sm">Rina Budiman</div>
+            <div class="text-gray-400 text-xs">Cafe Brew House</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-fade-up stagger-2">
+        <div class="flex items-center gap-1 text-yellow-400 mb-4 text-sm">★★★★★</div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">"Sangat direkomendasikan! Dashboard admin mereka memudahkan kami mengelola konten promosi tanpa ribet."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center font-bold text-pink-700">SK</div>
+          <div>
+            <div class="font-bold text-sm">Sari Kurniawati</div>
+            <div class="text-gray-400 text-xs">Cafe Delight</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-up">
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Kontak</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Siap Mengubah Bisnis Anda?</h2>
+        <p class="text-gray-600 mb-8">Hubungi kami dan dapatkan solusi digital terbaik untuk bisnis Anda. Konsultasi gratis, tanpa kewajiban apapun.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">📧</div>
+            <div>
+              <div class="font-medium text-sm">Email</div>
+              <div class="text-gray-500 text-xs">hello@vertibiz.com</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600">📞</div>
+            <div>
+              <div class="font-medium text-sm">Telepon</div>
+              <div class="text-gray-500 text-xs">+62 812-3456-7890</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center text-pink-600">📍</div>
+            <div>
+              <div class="font-medium text-sm">Alamat</div>
+              <div class="text-gray-500 text-xs">Jakarta, Indonesia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="bg-gray-50 p-8 rounded-2xl animate-fade-up animation-delay-300" onsubmit="handleSubmit(event)">
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Nama</label>
+            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm" placeholder="Anda">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Project</label>
+          <select required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm bg-white">
+            <option value="">Pilih jenis project</option>
+            <option>Web Development</option>
+            <option>Mobile App</option>
+            <option>Telegram Bot</option>
+            <option>Cloud Solution</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+          <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm resize-none" placeholder="Ceritakan kebutuhan Anda..."></textarea>
+        </div>
+        <button type="submit" class="w-full px-6 py-3.5 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-0.5">
+          Kirim Pesan
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold">V</div>
+          <span class="text-xl font-bold">Vertibiz</span>
+        </div>
+        <p class="text-gray-400 text-sm">Software house & vendor terpercaya. Mengubah ide jadi solusi digital.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-300">Navigasi</h4>
+        <ul class="space-y-2">
+          <li><a href="#about" class="text-gray-400 hover:text-white transition-colors text-sm">Tentang</a></li>
+          <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm">Layanan</a></li>
+          <li><a href="#project" class="text-gray-400 hover:text-white transition-colors text-sm">Project</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors text-sm">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-300">Layanan</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Web Development</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Mobile App</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Telegram Bot</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm">Cloud Solution</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-300">Follow Us</h4>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors text-sm">f</a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-400 transition-colors text-sm">t</a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors text-sm">in</a>
+          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500 transition-colors text-sm">ig</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+      <p class="text-gray-500 text-sm">© 2025 Vertibiz. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>
